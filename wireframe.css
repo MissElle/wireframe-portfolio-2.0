@@ -1,6 +1,14 @@
 /*wireframe.css stylings for portfolio 2.0*/
+/*============================================*/
+/*stylings for * and max-width for wrapper*/
 
 * {box-sizing: border-box; margin: 0; padding: 0;}
+
+#wrapper {
+	width: 100%;
+	max-width: 65em;
+	margin: 0 auto;
+}
 
 /*============================================*/
 /*stylings for the wireframe measurments*/
