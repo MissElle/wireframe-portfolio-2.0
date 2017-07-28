@@ -76,11 +76,17 @@ article p, figure, h1, h2, h3, h4 {
 p, figcaption {line-height: 1.1em;}
 
 /*============================================*/
-/*stylings for images used*/
+/*stylings for images and what holds them*/
+
+.image-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
 
 figure {
 	background-color: #ffffff;
-	width: 100%;
+	width: 30%;
 	padding: 0;
 	margin: 1em 0;
 }
@@ -95,6 +101,18 @@ figure {
 figcaption {
 	width: 100%;
 	background-color: cadetblue;
+}
+
+@media all and (max-width: 40em) {
+	figure {
+		width: 100%;
+		padding: 0;
+		margin: 1em 0;
+	}
+
+	.preview-link {
+		height: 10em;
+	}
 }
 
 /*============================================*/
