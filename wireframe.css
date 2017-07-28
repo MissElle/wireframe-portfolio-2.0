@@ -57,6 +57,13 @@ nav ul{
 	list-style: none;
 }
 
+#hamburger{
+	display: none; 
+	text-align: center; 
+	margin-top: .2em;
+}
+#hamburger img {width: 80%;}
+
 @media all and (max-width: 35.7em) {
 	nav ul {
 		display: none;
@@ -69,6 +76,8 @@ nav ul{
 		border-radius: 50em;
 		background-color: #919191;
 	}
+	
+	#hamburger{display:block;}
 }
 
 /*============================================*/
