@@ -10,6 +10,12 @@
 	margin: 0 auto;
 }
 
+@media all and (max-width: 64.9em) {
+	html, body, #wrapper {
+		overflow-y: hidden;
+	}
+}
+
 /*============================================*/
 /*stylings for the wireframe measurments*/
 
@@ -61,7 +67,9 @@ nav ul{
 	display: none; 
 	text-align: center; 
 	margin-top: .2em;
+	cursor: pointer;
 }
+
 #hamburger img {width: 80%;}
 
 @media all and (max-width: 35.7em) {
@@ -70,12 +78,39 @@ nav ul{
 	}
 	
 	nav {
+		position: relative;
 	  height: 2em;
 		width: 2em;
 		min-width: 2em;
 		border-radius: 50em;
 		background-color: #919191;
 	}
+
+	@keyframes menuGrow {
+		0% {
+			width: 2em;
+			height: 2em;
+			top: .15em;
+			right: .15em;
+		}
+		100% {
+			width: 20em; 
+			height: 20em;
+			top: 4em;
+			right: -5em;
+		}
+	}	
+	
+	nav:hover {
+		animation: .3s ease-out 0s 1 normal none running menuGrow;
+		width: 20em;
+		height: 20em;
+		top: 4em;
+		right: -5em;
+	}
+	
+	nav:hover #hamburger {display: none;}
+	nav:hover ul {display: block;}
 	
 	#hamburger{display:block;}
 }
