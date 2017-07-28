@@ -101,6 +101,11 @@ figure {
 
 figure:last-child {
 	margin-right: auto;
+	margin-left: auto;
+}
+
+figure:nth-last-child(2) {
+	margin-left: auto;
 }
 
 .preview-link {
@@ -121,6 +126,9 @@ figcaption {
 	
 }@media all and (max-width: 59em){
 	figure {width: 50%;}
+	figure:last-child {
+		margin: auto;
+	}
 }
 
 @media all and (max-width: 41.8em) {
