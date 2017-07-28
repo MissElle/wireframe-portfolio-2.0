@@ -57,6 +57,20 @@ nav ul{
 	list-style: none;
 }
 
+@media all and (max-width: 35.7em) {
+	nav ul {
+		display: none;
+	}
+	
+	nav {
+	  height: 2em;
+		width: 2em;
+		min-width: 2em;
+		border-radius: 50em;
+		background-color: #919191;
+	}
+}
+
 /*============================================*/
 /*stylings for text and headings*/
 
@@ -156,7 +170,7 @@ figcaption {
 
 footer {
 	width: 100%;
-	background-color: #575859;
+	background-color: #4f4f4f;
 	color: #ffffff;
 }
 
