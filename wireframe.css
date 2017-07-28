@@ -68,6 +68,28 @@ article p, figure, h1, h2, h3, h4 {
 p, figcaption {line-height: 1.1em;}
 
 /*============================================*/
+/*stylings for images used*/
+
+figure {
+	background-color: #ffffff;
+	width: 100%;
+	padding: 0;
+	margin: 1em 0;
+}
+
+.preview-link {
+	width: 100%;
+	height: 10em;
+	object-fit: cover;
+	object-position: center;
+}
+
+figcaption {
+	width: 100%;
+	background-color: cadetblue;
+}
+
+/*============================================*/
 /*stylings for footer tag excluding form*/
 
 
