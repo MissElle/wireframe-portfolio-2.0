@@ -1,4 +1,9 @@
+/*wireframe.css stylings for portfolio 2.0*/
+
 * {box-sizing: border-box; margin: 0; padding: 0;}
+
+/*============================================*/
+/*stylings for the wireframe measurments*/
 
 html {
 	background-image: url(images/graph.png);
@@ -14,6 +19,9 @@ body {
 	width: 100vw;
 	height: 100vh;
 }
+
+/*============================================*/
+/*Stylings for header name and navbar*/
 
 header{
 	width: 100%;
@@ -41,8 +49,29 @@ nav ul{
 	list-style: none;
 }
 
+/*============================================*/
+/*stylings for text and headings*/
+
 li a {
 	text-decoration: none;
 	color: white;
-/*	padding: 0 .3em;*/
+}
+
+article:first-child {
+	padding: .5em 0 0 0;
+}
+
+article p, figure, h1, h2, h3, h4 {
+	padding: 0 .5em .5em .5em;
+}
+
+p, figcaption {line-height: 1.1em;}
+
+/*============================================*/
+/*stylings for footer tag excluding form*/
+
+footer {
+	width: 100%;
+	background-color: #575859;
+	color: #ffffff;
 }
