@@ -1,0 +1,23 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+html {
+	background-image: url(images/graph.png);
+	background-repeat: repeat;
+	background-size: 2em;
+	}
+
+body {
+	position: absolute;
+	background-image: url(images/column.png);
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	width: 100vw;
+	height: 100vh;
+}
+
+.test{
+	border: .5em solid black;
+	width: 80%;
+	height: 10%;
+	margin: 1em;
+}
