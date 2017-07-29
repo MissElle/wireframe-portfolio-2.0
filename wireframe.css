@@ -162,16 +162,8 @@ figure {
 	height: 15em;
 	overflow: hidden;
 	padding: 0;
+	margin: auto;
 	z-index: 100;
-}
-
-figure:last-child {
-	margin-right: auto;
-	margin-left: auto;
-}
-
-figure:nth-last-child(2) {
-	margin-left: auto;
 }
 
 .preview-link {
@@ -192,9 +184,6 @@ figcaption {
 	
 }@media all and (max-width: 59em){
 	figure {width: 50%;}
-	figure:last-child {
-		margin: auto;
-	}
 }
 
 @media all and (max-width: 41.8em) {
@@ -239,13 +228,25 @@ footer form {
 	list-style: none;
 }
 
-.footer-section:first-child {
-	width: 50%;
-}
-
 .footer-section {
-	width: 25%;
+	width: 40%;
 	float: left;
 }
 
+.footer-section:first-child {
+	width: 60%;
+}
+
 .footer-section:last-child {width: 100%; clear: both;}
+
+/*============================================*/
+/*stylings for the footer's form*/
+
+input {
+	width: 85%;
+	float: right;
+}
+
+label {width: 15%; float: left;}
+
+textarea {width: 100%;}
