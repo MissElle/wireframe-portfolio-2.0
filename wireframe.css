@@ -406,3 +406,11 @@ button {
 	padding: .2em;
 	border-radius: .2em;
 }
+
+@media all and (max-width: 24.5em) {
+	input {width: 80%;}
+}
+
+@media all and (max-width: 19.7em) {
+	input {width: 75%;}
+}
