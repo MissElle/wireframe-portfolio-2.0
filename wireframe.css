@@ -267,12 +267,6 @@ footer form {
 	padding: 0 .5em .5em .5em;
 }
 
-#social-footer ul {
-	display: flex;
-	flex-flow: row wrap;
-	list-style: none;
-}
-
 .footer-section {
 	width: 40%;
 	float: left;
@@ -283,6 +277,59 @@ footer form {
 }
 
 .footer-section:last-child {width: 100%; clear: both;}
+
+.little-bio {
+	display: flex;
+	min-height: 55%;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#social-footer>ul li {
+	font-size: 2em;
+	padding: 0 .3em;
+}
+
+#social-footer ul {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	list-style: none;
+}
+
+#footer-bio {
+	max-width:80%;
+	text-align: center;
+}
+
+@media all and (max-width: 59em){
+	.little-bio {
+	  flex-flow: column-reverse nowrap;
+		justify-content: center;
+		align-content: center;
+	}
+	
+	#social-footer ul {
+		flex-flow: row nowrap;
+		margin-bottom: 1em;
+	}
+}
+
+@media all and (max-width: 47.45em) {
+	.footer-section, .footer-section:first-child {
+		width: 100%;
+	}
+	
+	.footer-section>form {
+		margin: auto;
+	}
+	
+	.little-bio {
+		min-height: auto;
+		height: auto;
+	}
+}
 
 /*============================================*/
 /*stylings for the footer's form*/
