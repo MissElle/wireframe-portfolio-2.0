@@ -92,7 +92,7 @@ nav>ul a:active {
 		display: none;
 		position: fixed;
 		top: .3em;
-		right: 0;
+		right: 2em;
 		font-size: 1.1em;
 	}
 	
