@@ -12,7 +12,7 @@
 
 @media all and (max-width: 64.9em) {
 	html, body, #wrapper {
-		overflow-y: hidden;
+		overflow-x: hidden;
 	}
 }
 
@@ -127,8 +127,12 @@ article:first-child {
 	padding: .5em 0 0 0;
 }
 
-article p, figure, h1, h2, h3, h4 {
+article p, figure {
 	padding: 0 .5em .5em .5em;
+}
+
+h1:last-child, h2:last-child, h3:last-child, h4:last-child {
+	margin-bottom: 1em;
 }
 
 p, figcaption {line-height: 1.1em; text-align: justify;}
@@ -205,6 +209,7 @@ figcaption {
 
 .portrait {
 	float: right;
+	padding: 1em;
 }
 
 @media all and (max-width: 35.7em) {
