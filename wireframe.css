@@ -138,10 +138,16 @@ p {
 	font-size: 1.2em;
 }
 
+.flex-headings {
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: flex-start;
+}
+
 /*============================================*/
 /*stylings for images and what holds them*/
 
-.image-container {
+.flex-images {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
