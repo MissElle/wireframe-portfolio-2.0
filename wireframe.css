@@ -195,7 +195,7 @@ figure img {
 }
 
 figure:hover img {
-	opacity: .4;
+	opacity: .3;
 }
 
 figcaption {
@@ -206,10 +206,10 @@ figcaption {
 	max-width: 33em;
 	padding: .2em;
 	height: 15em;
-
 	padding: 1em;
 	vertical-align: bottom;
 	text-align: justify;
+	font-weight: bold;
 	transition: top .21s ease-out;
 	z-index: 10;
 	pointer-events: none;
