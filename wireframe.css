@@ -10,10 +10,8 @@
 	margin: 0 auto;
 }
 
-@media all and (max-width: 64.9em) {
-	html, body, #wrapper {
+html, body, #wrapper {
 		overflow-x: hidden;
-	}
 }
 
 /*============================================*/
@@ -23,7 +21,7 @@ html {
 	background-image: url(images/graph.png);
 	background-repeat: repeat;
 	background-size: 2em;
-	}
+}
 
 body {
 	position: absolute;
@@ -227,6 +225,7 @@ footer {
 	width: 100%;
 	background-color: #4f4f4f;
 	color: #ffffff;
+	overflow: auto;
 }
 
 footer form {
@@ -234,6 +233,19 @@ footer form {
 	padding: 0 .5em .5em .5em;
 }
 
-#social-footer {
+#social-footer ul {
+	display: flex;
+	flex-flow: row wrap;
+	list-style: none;
+}
+
+.footer-section:first-child {
 	width: 50%;
 }
+
+.footer-section {
+	width: 25%;
+	float: left;
+}
+
+.footer-section:last-child {width: 100%; clear: both;}
