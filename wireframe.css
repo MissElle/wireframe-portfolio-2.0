@@ -46,6 +46,13 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 .2em;
+	transition: all 1s ease-in-out; 
+}
+
+.sticky-header {
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 nav {
@@ -86,7 +93,7 @@ nav>ul a:active {
 
 @media all and (max-width: 35.7em) {
 	header div {width: 0; overflow: visible;}
-	header>div p {width: 90vw;}
+	header>div p {width: 90vw;} /*This is to keep the name visible, but the div element at 0. Prevents overlap issues in the styling.*/
 	
 	nav ul {
 		display: none;
