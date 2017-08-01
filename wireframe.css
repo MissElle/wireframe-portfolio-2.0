@@ -49,10 +49,16 @@ header{
 	transition: all 1s ease-in-out; 
 }
 
+@keyframes headerScrollDown {
+	0%{top: -3em;}
+	100%{top: 0;}
+}
+
 .sticky-header {
 	position: fixed;
 	top: 0;
 	left: 0;
+	animation: .4s linear 1 headerScrollDown;
 }
 
 nav {
