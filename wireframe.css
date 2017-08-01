@@ -10,7 +10,7 @@
 	margin: 0 auto;
 }
 
-html, body, #wrapper {
+html, #wrapper {
 		overflow-x: hidden;
 }
 
