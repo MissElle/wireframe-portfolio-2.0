@@ -1,21 +1,18 @@
-var header = document.getElementById('header');
+var previousScroll = 0; //This updates after every scroll to afix the header only if distance is less than is used to be, or "scroll up
+
 window.addEventListener('scroll', stickyHeader);
 
 function stickyHeader() {
 	var header =document.getElementById('header');
-	var headerTop = header.offsetTop;
-	var scrollAmount = window.pageYOffset;
-	var distance = headerTop - scrollAmount;
+	var distance = document.body.scrollTop;;
 	
-	console.log('Function is read');
-	
-	if(distance <= -48) {
-		console.log('if statement read' + distance);
+	if(distance <= previousScroll) {
 		header.className = 'sticky-header';
 	}else{
-		console.log('else statement read' + distance);
 		header.className = 'none';
 	}
+	
+	previousScroll=window.pageYOffset;
 }
 
  
