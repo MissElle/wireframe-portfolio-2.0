@@ -14,3 +14,5 @@ function stickyHeader() {
 	
 	previousScroll=window.pageYOffset;
 }
+
+//Need to add function for images here.... use navigator.useragent to detect mobile browsers.
