@@ -9,10 +9,10 @@ function stickyHeader() {
 	
 	console.log(headerPos +' ' +distance);
 	
-	if(distance <= previousScroll && distance >= 48) {
+	if(distance <= previousScroll && distance >= 10) {
 		header.className = 'sticky-header';
 	}else{
-		header.className = 'none';
+		header.className = 'static-header';
 	}
 	
 	previousScroll=window.pageYOffset;
