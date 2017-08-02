@@ -4,9 +4,12 @@ window.addEventListener('scroll', stickyHeader);
 
 function stickyHeader() {
 	var header =document.getElementById('header');
-	var distance = document.body.scrollTop;;
+	var headerPos = header.offsetTop;
+	var distance = document.body.scrollTop;
 	
-	if(distance <= previousScroll) {
+	console.log(headerPos +' ' +distance);
+	
+	if(distance <= previousScroll && distance >= 48) {
 		header.className = 'sticky-header';
 	}else{
 		header.className = 'none';
@@ -14,5 +17,3 @@ function stickyHeader() {
 	
 	previousScroll=window.pageYOffset;
 }
-
- 
