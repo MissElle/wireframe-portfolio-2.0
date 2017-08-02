@@ -37,7 +37,6 @@ body {
 /*Stylings for header name and navbar*/
 
 header{
-	position: absolute;
 	width: 100%;
 	height: 3em;
 	background-color: #000000;
@@ -63,7 +62,13 @@ header{
 	position: fixed;
 	top: 0;
 	left: 0;
+	transition: all 1s ease-in-out;
 	animation: .4s linear 1 headerScrollDown;
+}
+
+.static-header {
+	position: absolute;
+	transition: all 1s ease-in-out;
 }
 
 nav {
