@@ -1,8 +1,7 @@
 var previousScroll = 0; //This updates after every scroll to afix the header only if distance is less than is used to be, or "scroll up
 
-console.log (navigator.userAgent);
-
 window.addEventListener('scroll', stickyHeader);
+window.addEventListener('load', isMobile);
 
 function stickyHeader() {
 	var header =document.getElementById('header');
@@ -17,4 +16,21 @@ function stickyHeader() {
 	previousScroll=window.pageYOffset;
 }
 
+function isMobile() {
+	var figcaptions = document.getElementsByTagName('figcaption');
+	var figures = document.getElementsByTagName('figure');
+	
+	for(var i=0; i<figcaptions.length; ++i) {
+		if(i !== undefined){
+			figures[i].style.height = '21em';
+			figcaptions[i].className = 'mobile';
+		}else {
+			figures[i].style.height = '15em';
+			figcaptions[i].className = 'not-mobile';
+		}
+	}
+}
+											
 //Need to add function for images here.... use navigator.useragent to detect mobile browsers.
+
+//navigator.userAgent.test('string')
