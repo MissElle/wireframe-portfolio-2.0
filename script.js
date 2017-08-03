@@ -21,7 +21,7 @@ function isMobile() {
 	var figures = document.getElementsByTagName('figure');
 	
 	for(var i=0; i<figcaptions.length; ++i) {
-		if(i !== undefined){
+		if(/iPhone|iPad|iPod|Android| Blackberry|Opera Mini|IEMobile/i.test(navigator.userAgent)){
 			figures[i].style.height = '21em';
 			figcaptions[i].className = 'mobile';
 		}else {
