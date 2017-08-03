@@ -253,18 +253,26 @@ figcaption {
 	top: 0;
 	width: auto;
 	max-width: 33em;
-	padding: .2em;
-	height: 15em;
 	padding: 1em;
-	vertical-align: bottom;
 	text-align: justify;
 	font-weight: bold;
 	transition: top .21s ease-out;
 	z-index: 10;
-	pointer-events: none;
+	pointer-events: none;	
 }
 
-figure:hover figcaption {
+figcaption.not-mobile {
+	height: 15em;
+	vertical-align: bottom;
+}
+
+figcaption.mobile {
+	vertical-align: top;
+	background-color: #d8d8d8;
+	height: 6em;
+}
+
+figure:hover figcaption.not-mobile {
 	top: -15em;
 }
 
