@@ -31,6 +31,4 @@ function isMobile() {
 	}
 }
 											
-//Need to add function for images here.... use navigator.useragent to detect mobile browsers.
-
-//navigator.userAgent.test('string')
+//isMobile() test mostly derived from https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
