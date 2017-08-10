@@ -1,5 +1,14 @@
 var previousScroll = 0; //This updates after every scroll to afix the header only if distance is less than is used to be, or "scroll up
 
+var images = [
+	{"name" : "test",
+	"location" : "images/test-sad-dog.jpg",
+	"description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"},
+	{"name" : "test-2",
+	 "location" : "images/test-sad-cat.jpg",
+	 "description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"
+	}];
+
 window.addEventListener('scroll', stickyHeader);
 window.addEventListener('load', isMobile);
 
