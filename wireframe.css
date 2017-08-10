@@ -229,6 +229,7 @@ figure {
 	overflow: hidden;
 	padding: 0;
 	margin: auto;
+	cursor: pointer;
 	z-index: 1;
 }
 
