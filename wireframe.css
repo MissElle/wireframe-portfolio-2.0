@@ -34,6 +34,52 @@ body {
 }
 
 /*============================================*/
+/*Stylings for the image container*/
+
+#dark-box {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 101;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+}
+
+#image-box {
+	background-color: rgba(255, 255, 255, 1);
+	padding: .7em;
+	border-radius: .7em;
+	display: table-cell;
+}
+
+.image-side {
+	float: left;
+	height: 100%; 
+	width: 20em;
+}
+
+.image-side>img {
+	height: 100%;
+}
+
+.description-side {
+	float: left;
+	height: 100%; 
+	background-color: rgba(255, 255, 255, 1);
+}
+
+#cross {
+	position: absolute;
+	width: 2em;
+}
+
+/*============================================*/
 /*Stylings for header name and navbar*/
 
 header{
