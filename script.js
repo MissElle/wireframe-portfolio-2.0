@@ -11,6 +11,8 @@ var images = [
 
 window.addEventListener('scroll', stickyHeader);
 window.addEventListener('load', isMobile);
+window.addEventListener('load', detectAspectRatio);
+window.addEventListener('resize', detectAspectRatio);
 
 function stickyHeader() {
 	var header =document.getElementById('header');
@@ -39,5 +41,25 @@ function isMobile() {
 		}
 	}
 }
-											
+
+function detectAspectRatio() {
+	var docWidth = document.body.clientWidth;
+	var docHeight = document.body.clientHeight;
+	
+	var imageSide = document.getElementById('image-side');
+	var descriptionSide = document.getElementById('description-side');
+	var imageBox = document.getElementById('image-box');
+	
+	if(docWidth >= docHeight) {
+		imageSide.style.maxHeight = '90vh';
+		descriptionSide.style.maxHeight = '90vh';
+		imageBox.style.maxHeight = '90vh';
+	}else if(docHeight < docWidth){
+		imageSide.style.maxWidth = '90vh';
+		descriptionSide.style.maxWidth = '10vh';
+		imageBox.style.maxWidth = '100vh';
+	}
+	
+}
+
 //isMobile() test mostly derived from https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
