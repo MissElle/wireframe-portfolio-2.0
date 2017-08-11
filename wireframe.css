@@ -61,24 +61,18 @@ body {
 	max-width: 100vw;
 }
 
-.image-side {
+#image-side {
 	height: 100%; 
-	max-height: 100vh;
-	max-width: 100vw;
 }
 
-.image-side>img {
+#image-side>img {
 	height: 100%;
-	max-height: 100vh;
-	max-width: 100vw;
 }
 
-.description-side {
+#description-side {
 	width: 20em;
 	height: 100%; 
 	background-color: rgba(255, 255, 255, 1);
-	max-height: 100vh;
-	max-width: 100vw;
 }
 
 #cross {
