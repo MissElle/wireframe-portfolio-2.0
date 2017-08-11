@@ -62,11 +62,14 @@ body {
 }
 
 #image-side {
-	height: 100%; 
+
 }
 
 #image-side>img {
 	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	object-position: center;
 }
 
 #description-side {
