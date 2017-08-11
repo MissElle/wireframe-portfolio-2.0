@@ -55,13 +55,12 @@ body {
 	background-color: rgba(255, 255, 255, 1);
 	padding: .7em;
 	border-radius: .7em;
-	display: table-cell;
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 .image-side {
-	float: left;
 	height: 100%; 
-	width: 20em;
 }
 
 .image-side>img {
@@ -69,7 +68,7 @@ body {
 }
 
 .description-side {
-	float: left;
+	width: 20em;
 	height: 100%; 
 	background-color: rgba(255, 255, 255, 1);
 }
