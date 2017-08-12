@@ -26,7 +26,6 @@ window.addEventListener('resize', detectAspectRatio);
 document.getElementById('cross').addEventListener('click', closeImageBox);
 
 var figures = document.getElementsByTagName('figure');
-
 for(var i=0; i<figures.length; ++i){
 figures[i].addEventListener('click', openImageBox);
 }
@@ -107,9 +106,12 @@ function closeImageBox() {
 //============================================//
 //This function opens the #image-box with the pulled data 
 
-function openImageBox() {
+function openImageBox(el) {
 	var imgBox =document.getElementById('dark-box');
+	var testing = this.id;
 	
+	console.log(testing);
+	imgBox.style.display = 'flex';
 	imgBox.className = 'fade-in';
 }
 
