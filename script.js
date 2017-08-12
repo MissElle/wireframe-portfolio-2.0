@@ -17,7 +17,7 @@ var images = [
 	}];
 
 var brokenLink = {
-	"location" : "",
+	"location" : "images/shrug.svg",
 	"description" : "<h2>Uh Oh!<br> A Broken Link!</h2> <br><p>It looks like the artist programmed this site wrong! Silly Artist, thinking she's a programmer...</p>"
 };
 
