@@ -23,7 +23,13 @@ window.addEventListener('scroll', stickyHeader);
 window.addEventListener('load', isMobile);
 window.addEventListener('load', detectAspectRatio);
 window.addEventListener('resize', detectAspectRatio);
+document.getElementById('cross').addEventListener('click', closeImageBox);
 
+var figures = document.getElementsByTagName('figure');
+
+for(var i=0; i<figures.length; ++i){
+figures[i].addEventListener('click', openImageBox);
+}
 //============================================//
 //This function helps the sticky header scroll foward and hide appropriately
 
@@ -89,3 +95,21 @@ function detectAspectRatio() {
 		descriptionSide.style.height = '30%';
 	}
 }
+
+//============================================//
+//This function will close the #image-box
+
+function closeImageBox() {
+	var imgBox = document.getElementById('dark-box');
+	imgBox.className = 'fade-out';
+}
+
+//============================================//
+//This function opens the #image-box with the pulled data 
+
+function openImageBox() {
+	var imgBox =document.getElementById('dark-box');
+	
+	imgBox.className = 'fade-in';
+}
+
