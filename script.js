@@ -11,10 +11,15 @@ var images = [
 	{"name" : "test",
 	"location" : "images/test-sad-dog.jpg",
 	"description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"},
-	{"name" : "test-2",
+	{"name" : "notSo",
 	 "location" : "images/test-sad-cat.jpg",
 	 "description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"
 	}];
+
+var brokenLink = {
+	"location" : "",
+	"description" : "<h2>Uh Oh!<br> A Broken Link!</h2> <br><p>It looks like the artist programmed this site wrong! Silly Artist, thinking she's a programmer...</p>"
+};
 
 //============================================//
 //These are all the event listeners
@@ -108,9 +113,20 @@ function closeImageBox() {
 
 function openImageBox(el) {
 	var imgBox =document.getElementById('dark-box');
-	var testing = this.id;
+	var elName = this.id;
 	
-	console.log(testing);
+	for (var i=0; i<images.length; ++i){
+		var imageName = images[i].name;
+		
+		if (imageName.match(elName)){
+			if (elName === imageName){
+				console.log ("you see the element " + elName);
+			}else {
+				console.log ("This is not working");
+			}
+		}
+	}
+	
 	imgBox.style.display = 'flex';
 	imgBox.className = 'fade-in';
 }
