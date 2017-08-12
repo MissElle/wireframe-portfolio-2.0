@@ -10,10 +10,10 @@ var previousScroll = 0; //This updates after every scroll to afix the header onl
 var images = [
 	{"name" : "test",
 	"location" : "images/test-sad-dog.jpg",
-	"description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"},
+	"description" : "<p>This is a test paragraph</p><p>this is a second test paragraph</p>"},
 	{"name" : "notSo",
 	 "location" : "images/test-sad-cat.jpg",
-	 "description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"
+	 "description" : "<p>This is a test paragraph</p><p>this is a second test paragraph</p>"
 	}];
 
 var brokenLink = {
@@ -117,12 +117,16 @@ function openImageBox(el) {
 	
 	for (var i=0; i<images.length; ++i){
 		var imageName = images[i].name;
+		var changeoutText = document.getElementById('changeout-text');
+		var changeoutImage = document.getElementById('changeout-image');
 		
 		if (imageName.match(elName)){
 			if (elName === imageName){
-				console.log ("you see the element " + elName);
+				changeoutImage.src = images[i].location;
+				changeoutText.innerHTML = images[i].description;
 			}else {
-				console.log ("This is not working");
+				changeoutImage.src = brokenLink.location;
+				changeoutText.innerHTML = brokenLink.description;
 			}
 		}
 	}
