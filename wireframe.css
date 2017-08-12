@@ -94,7 +94,32 @@ body {
 }
 
 /*============================================*/
-/*Stylings for header name and navbar*/
+/*These are classes for #dark-box's fade-ins and fade-outs*/
+
+.fade-in {
+	display: block;
+	opacity: 1;
+	animation: .3s linear 1 fadeIn;
+}
+
+.fade-out {
+	display: none;
+	opacity: 0;
+	animation: .3s linear 1 fadeOut;
+	pointer-events: none;
+}
+
+@keyframes fadeIn {
+	0% {display: none; opacity: 0;}
+	100% {display: block; opacity: 1;}
+}
+
+@keyframes fadeOut {
+	0% {display: block; opacity: 1;}
+	100% {display: none; opacity: 0;}
+}
+
+/*============================================*/
 /*Stylings for header name and navbar*/
 
 header{
