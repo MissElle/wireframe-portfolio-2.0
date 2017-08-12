@@ -46,20 +46,27 @@ function detectAspectRatio() {
 	var docWidth = document.body.clientWidth;
 	var docHeight = document.body.clientHeight;
 	
-	var imageSide = document.getElementById('image-side');
+	var imgWidth = document.getElementById('changeout-image').naturalWidth;
+	var imgHeight = document.getElementById('changeout-image').naturalHeight;
+	
 	var descriptionSide = document.getElementById('description-side');
-	var imageBox = document.getElementById('image-box');
+	var imageSide = document.getElementById('image-side');
 	
-	if(docWidth >= docHeight) {
-		imageSide.style.maxHeight = '90vh';
-		descriptionSide.style.maxHeight = '90vh';
-		imageBox.style.maxHeight = '90vh';
-	}else if(docHeight < docWidth){
-		imageSide.style.maxWidth = '90vh';
-		descriptionSide.style.maxWidth = '10vh';
-		imageBox.style.maxWidth = '100vh';
+	var windowRatio = docWidth/docHeight;
+	var imageRatio = imgWidth/imgHeight;
+	
+	if(windowRatio >= imageRatio) {
+		imageSide.style.height = '100%';
+		imageSide.style.width = '70%';
+		descriptionSide.style.width = '30%';
+		descriptionSide.style.height = '100%';
+	
+	}else {
+		imageSide.style.height = '70%';
+		imageSide.style.width = '100%';
+		descriptionSide.style.width ='100%';
+		descriptionSide.style.height = '30%';
 	}
-	
 }
 
 //isMobile() test mostly derived from https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
