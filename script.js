@@ -1,4 +1,11 @@
+//============================================//
+//Wireframe javascript - portfolio 2.0
+//============================================//
+// This holds global variables//
+
 var previousScroll = 0; //This updates after every scroll to afix the header only if distance is less than is used to be, or "scroll up
+
+//This is image data that will be pulled to fill in the image pop-up box
 
 var images = [
 	{"name" : "test",
@@ -9,10 +16,16 @@ var images = [
 	 "description" : "<p>This is a test paragraph</p> <p> this is a second test paragraph</p>"
 	}];
 
+//============================================//
+//These are all the event listeners
+
 window.addEventListener('scroll', stickyHeader);
 window.addEventListener('load', isMobile);
 window.addEventListener('load', detectAspectRatio);
 window.addEventListener('resize', detectAspectRatio);
+
+//============================================//
+//This function helps the sticky header scroll foward and hide appropriately
 
 function stickyHeader() {
 	var header =document.getElementById('header');
@@ -23,9 +36,11 @@ function stickyHeader() {
 	}else{
 		header.className = 'static-header';
 	}
-	
-	previousScroll=window.pageYOffset;
+	previousScroll=window.pageYOffset; //This will be used to see if the user "scrolls up" by comparing it to the previous scroll number
 }
+
+//============================================//
+//This detects if the device is mobile and changes the handling of figcaptions
 
 function isMobile() {
 	var figcaptions = document.getElementsByTagName('figcaption');
@@ -41,6 +56,12 @@ function isMobile() {
 		}
 	}
 }
+
+
+//isMobile() test mostly derived from https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
+
+//============================================//
+//This function formats the #image-box depending on img natural aspect ratio compared to the window aspect ratio
 
 function detectAspectRatio() {
 	var docWidth = document.body.clientWidth;
@@ -68,5 +89,3 @@ function detectAspectRatio() {
 		descriptionSide.style.height = '30%';
 	}
 }
-
-//isMobile() test mostly derived from https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
